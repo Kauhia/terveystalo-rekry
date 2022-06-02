@@ -34,7 +34,7 @@ describe("GET /sumisprime endpoint", () => {
         const res = await request(app)
             .get('/api/v1/sumisprime/?numbers=')
 
-            expect(res.statusCode).toEqual(400)
+        expect(res.statusCode).toEqual(400)
         expect(res.body.errorMessage).toEqual("Query parameter must not be empty array")
     })
 

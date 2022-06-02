@@ -1,10 +1,13 @@
 import express, { Request, Response } from 'express';
+import cors from "cors";
 
 import { isString } from './utils';
 import { isPrime, sum } from './services';
 
 const app = express();
+app.use(cors());
 app.use(express.json());
+
 
 app.get('/api/v1/sumisprime',
     (req: Request, res: Response) => {
