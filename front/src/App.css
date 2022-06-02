@@ -1,0 +1,45 @@
+/*Border box reset*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    background-color: #212a4f;
+    box-sizing: border-box;
+}
+
+.center-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.center-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.prime-test__input, .prime-test__button {
+    line-height: 2rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+.prime-test__input {
+    width: 20rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+}
+
+.prime-test__button {
+    width: 5rem;
+    background-color: #1fe31f;
+}
+
+.prime-test__result, .prime-test__error {
+    color: aliceblue;
+}
