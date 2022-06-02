@@ -28,7 +28,6 @@ function App() {
 
             setCheckResult(response.data)
         } catch (error: any) {
-            console.log("er", error)
             const er = error?.response?.data?.errorMessage ?? error?.message ?? "Something went wrong"
             setError(er)
             setCheckResult(NOT_TESTED)

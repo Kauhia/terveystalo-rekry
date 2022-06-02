@@ -17,23 +17,8 @@ GET http://localhost/myapi/?action=checkprime&number=89
  
 Clear and compact code is appreciated.
 
-## Solution & considerations
+## Solution & considerations for part 3
 
-- backend
-    - sum service
-        - reference prime service
-    - prime service
-        - how to cache?
-        - how to handle expensive computation?
-        - how to react if request is going to timeout?
-        - should we limit the request parameter size to avoid a attack vector
-    - endpoints
-        - validation
-- frontend
-    - react + axios
-    - sum field for integers
-- deployment
-    - cloud functions with limited scaling enabled
-    - workers for computation?
-    - caching computation results?
-    - Stored values in database?
+I would host the endpoint in Azure with their virtual machines or refactor the code to use azure functions.
+
+Depending on how demanding calculations could be it might be necessary to add a cache or otherwise store results of long running calculations (memoization or database). Both deployment solutions may timeout on bigger calculations. In this case the code should be factored to be more of a job queue system where user can queue the calculation and later come back to ask if it has completed.
